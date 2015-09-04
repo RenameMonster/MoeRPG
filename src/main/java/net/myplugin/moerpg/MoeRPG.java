@@ -1,4 +1,4 @@
-package net.myplugin.lk.MoeRPG;
+package net.myplugin.moerpg;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
