@@ -1,5 +1,5 @@
 name: MoeRPG
-main: net.myplugin.lk.MoeRPG.MoeRPG
+main: net.myplugin.moerpg.MoeRPG
 version: 0.1.6-SNAPSHOT
 author: iwar
 permissions:
