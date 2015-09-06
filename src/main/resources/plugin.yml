@@ -1,0 +1,40 @@
+name: MoeRPG
+main: net.myplugin.moerpg.MoeRPG
+version: 0.1.6-SNAPSHOT
+author: iwar
+permissions:
+    moerpg.*:
+        description: Allows you to use all moerpg feature
+        default: op
+        children:
+          moerpg.user: true
+          moerpg.admin: true
+    moerpg.user:
+        description: The basic feature of platform
+        default: false
+        children:
+          moerpg.info: true
+          moerpg.select: true
+          moerpg.choose: false
+    moerpg.info:
+        description: The feature for administrators
+        default: true
+        children:
+          moerpg.info.self: true
+          moerpg.info.other: false
+    moerpg.admin:
+        description: Allows you to create platform
+        default: op
+        children:
+          moerpg.version: true
+          moerpg.debug: true
+          moerpg.reload: true
+commands:
+   mrpg:
+      description: This is the main command of MoeRPG.
+      usage: |
+        /mrpg select - select the main job
+        /mrpg choose - choose the sub job
+        /mrpg reload - reload the configuration
+        /mrpg info   - show one's infomation
+        /mrpg version -show the version of this plugin

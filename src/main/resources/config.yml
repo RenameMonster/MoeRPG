@@ -1,0 +1,30 @@
+#essential config
+debug: false
+info: Versions:0.1.6，Author:iwar,This version is not enough stable,do not use it in any official server.
+list:
+  mainjob:
+    - saber.战士
+    - archer.射手
+    - wizard.法师
+    - assassin.刺客
+  subjob:
+    - cooker.厨师
+    - blacksmith.铁匠
+    - farmer.农民
+#message config
+message:
+  reload:
+    human: &a已经推倒MoeRPG的配置姬并扶起（注孤生）
+    bot: MoeRPG reload complete
+  nojob: &c您选择的职业并不存在，请检查是否输入错误。
+  version: &c缺少权限"moerpg.version"
+#job config
+main:
+  warrior:
+  archer:
+  wizard:
+  assassin:
+sub:
+  cooker:
+  blacksmith:
+  farmer:
