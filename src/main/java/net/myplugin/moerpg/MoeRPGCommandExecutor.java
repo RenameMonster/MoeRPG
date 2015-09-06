@@ -117,16 +117,16 @@ public class MoeRPGCommandExecutor implements CommandExecutor {
             case "info":
                 if (sender instanceof Player){
                     if (args[1]==null){
-                        this.print(p,p.getName());
+                        this.print(sender,p.getName());
                     } else {
-                        this.print(p,args[1]);
+                        this.print(sender,args[1]);
                     }
                 }
-                if (sender instanceof CommandSender){
+                if (sender instanceof ConsoleCommandSender){
                     if (args[1]==null){
                         sender.sendMessage("You have to provide a player name.");
                     } else {
-                        this.print(p,args[1]);
+                        this.print(sender,args[1]);
                     }
                 }
                 return true;
@@ -137,7 +137,7 @@ public class MoeRPGCommandExecutor implements CommandExecutor {
     }
     /* 打印职业信息 */
 
-    public void print(Player er,String p){
+    public void print(CommandSender er,String p){
         String t1 = plugin.getConfig().getString(p + ".main");
         String t2 = plugin.getConfig().getString(p + ".sub1");
         String t3 = plugin.getConfig().getString(p + ".sub2");
